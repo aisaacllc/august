@@ -7,13 +7,7 @@ pipeline {
         DOCKER_REGISTRY = 'registry.example.com'
     }
 
-    // Define tools if needed (e.g., specific Maven or JDK versions configured in Jenkins)
-    tools {
-        //maven 'Maven 3.9.6'
-        //jdk 'JDK 17'
-    }
-
-    // Keep only the last 5 builds to save disk space
+     // Keep only the last 5 builds to save disk space
     options {
         buildDiscarder(logRotator(numToKeepStr: '5'))
         timeout(time: 1, unit: 'HOURS')
