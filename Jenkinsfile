@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    }
+    
     stages {
         stage('Clean Workspace') {
             steps {
@@ -21,9 +21,8 @@ pipeline {
                         echo "Success"
     }
 }
-
-
     }
+  
     post {
         success {
             echo "Website files published successfully!"
