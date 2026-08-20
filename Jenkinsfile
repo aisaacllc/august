@@ -1,9 +1,28 @@
 pipeline {
     agent any
+    }
     stages {
         stage('Clean Workspace') {
-            echo "workspace clean compelted"
+            steps {
+                cleanWs()
+            }
         }
+        stage('Checkout Source') {
+            steps {
+                script {
+                    //git branch: "${params.BRANCH}",
+                    //credentialsId: 'Jenkins-CI-Token',
+                    //url: "${params.REPO_URL}"
+                }
+            }
+        }
+                      stage('Publish Website Files') {
+    steps {
+                        echo "Success"
+    }
+}
+
+
     }
     post {
         success {
