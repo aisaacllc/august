@@ -8,7 +8,7 @@ pipeline {
             {
               echo "Checkout complete!"
             }
-        }
+        
     stage('Publish Website Files') {
             steps {
                       echo "Publish complete!"
